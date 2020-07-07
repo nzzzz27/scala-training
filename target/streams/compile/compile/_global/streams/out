@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/traning/scala-training/src/main/scala/07/July06.scala:36:13: not found: value samplr4[0m
-[0m[[0m[31merror[0m] [0m[0m    println(samplr4(Some(2)))[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/traning/scala-training/src/main/scala/07/July07.scala:59:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def find(p: A => Boolean): Option[A] = {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -38,13 +38,11 @@ http://www.ne.jp/asahi/hishidama/home/tech/scala/function.html
   -  返り値：true or false
   -　メモ　：Option[Option[Int]]にも使える。（参照：sample)
 
-
 - map()
   -　返り値：Some or None
 　-　引数　：関数      ex) i => i * 2
 　-　仮引数には、mapの返り値（つまりOption型の値 or None)が代入されている
   -  Option[Option[Int]]が渡された場合、Option[Option[int]]で返す
-
 
 - flatten
   -  返り値：Some or None
