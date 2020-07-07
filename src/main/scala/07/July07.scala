@@ -9,9 +9,10 @@ object July07 {
 
       println("//Option Question4: for")
       println(optionQuestion4_3(Some(Some(2))))
-      
+      println(optionQuestion4_4(Some(Some(2))))
+
+
       println("//Test: Seq")
-      println(find)
     }
 
   // ------- Option ----------------
@@ -52,15 +53,19 @@ object July07 {
         i * 2
       }
   }
+      // for yield でoptionとかを剥がして使う時は、for の中で値を取り出し、yieldで加工することが多い
+      def optionQuestion4_4(num: Option[Option[Int]]): Option[Int] = {
+      for {
+        numOpt <- num
+        i <- numOpt
+      } yield {
+        i * 2
+      }
+  }
+
 }   
 
   // -------- Seq ----------------
+
   // test
-  def find(p: A => Boolean): Option[A] = {
-    while (hasNext) {
-      val a = next()
-      if (p(a)) return Some(a)
-     }
-     None
-  }
 

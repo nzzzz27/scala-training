@@ -1,4 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/traning/scala-training/src/main/scala/07/July07.scala:59:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def find(p: A => Boolean): Option[A] = {[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/traning/scala-training/src/main/scala/07/July07.scala:61:14: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Option[Int][0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m        i.map(_ * 2)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
