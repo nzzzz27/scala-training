@@ -8,7 +8,7 @@ object July08 {
     println(reduceSample())
 
     println("//Seq Question")
-    println()
+    println(seqQuestion1(Seq(1, 3, 5, 7, 9)))
   }
   
   // common values
@@ -35,8 +35,17 @@ object July08 {
   }
   
   //問題
-  def seqQuestion1(numSeq: Seq[Int]): Seq[Int] = {
-
+  def seqQuestion1(numSeq: Seq[Int]): Any = {
+    //numSeq.foldLeft(0)((acc, n) => {
+      //if (n % 3 == 0) 0 else n
+    //})
+    //
+    //numSeq match {
+      //case   => 
+      //case _ => 0
+    //}
+    //
+    numSeq.map(num => if (num % 3 == 0) 0 else num)
   }
 
 }

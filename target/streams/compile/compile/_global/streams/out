@@ -1,4 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July08.scala:31:42: not found: value n[0m
-[0m[[0m[31merror[0m] [0m[0m    numSeq1.reduce((acc, value) => acc + n) [0m
-[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July08.scala:48:31: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Int[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    numSeq.map(num => if (num % 3) 0 else num)[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
