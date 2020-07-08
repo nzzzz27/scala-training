@@ -1,11 +1,15 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/nozomi.yonezawa/traning/scala-training/target/scala-2.12/scala-training_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/scala-training_2.12-0.1.0-SNAPSHOT.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	July08.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July08.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July07$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/traning/scala-training/target/scala-2.12/classes/July07$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July07$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July06.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/traning/scala-training/target/scala-2.12/classes/July06.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July06.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July06$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/traning/scala-training/target/scala-2.12/classes/July06$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July06$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	July08$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July08$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July07.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/traning/scala-training/target/scala-2.12/classes/July07.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July07.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

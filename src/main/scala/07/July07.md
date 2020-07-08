@@ -68,5 +68,12 @@
 
 - headOption
  - 返り値：Some(コレクションの先頭) or None
+ - Noneは、コレクションが空の場合
 
-- last 
+- last
+ - 返り値：コレクションの末尾 or None
+ - Noneは、コレクションが空の場合
+
+- lastOption()
+ - 返り値：Some(コレクションの末尾）or None
+ - Noneは、コレクションが空の場合
