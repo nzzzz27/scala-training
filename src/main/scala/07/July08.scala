@@ -7,8 +7,8 @@ object July08 {
     println(foldRightSample())
     println(reduceSample())
 
-    println("// Question")
-    //println()
+    println("//Seq Question")
+    println()
   }
   
   // common values
@@ -33,6 +33,10 @@ object July08 {
       acc + value // 6
     ) 
   }
+  
+  //問題
+  def seqQuestion1(numSeq: Seq[Int]): Seq[Int] = {
 
+  }
 
 }

@@ -28,6 +28,29 @@
      - = List()
      - Nil +: List(1, 2) = List(List(), 1, 2)
 
-- foldLeft(初期値)(行いたい処理)
-  - 
+- foldLeft(initial value)((accumulator, value) => expression )
+  - 具体例１：Seq(1, 2, 3, 4).foldLeft(0: Int)((acc: Int, n: Int) => acc + n)
+  - 一番初めは、accumulator = initial value
+  - value = コレクション内の値１つずつ
+  - ①expressionの結果がaccumulatorに代入される　②次のコレクション内の値を用いてexpressionの処理をする
 
+- foldRight(initial value)((accumulator, value) => expression )
+  - foldLeftの逆
+
+- reduce((accumulator, value) => expression )
+  - 処理結果 or 例外
+
+- min
+  - 返り値：最小の値 or 例外
+  - "a" < "あ"
+  - "b" < "あ"
+  - StringとIntの混合リストに対してはエラーとなる
+
+- max
+  - 返り値：最大の値 or 例外
+  - "a" < "あ"
+  - "b" < "あ"
+  - StringとIntの混合リストに対してはエラーとなる
+
+- match式
+  - 条件にあう値を取り出す
