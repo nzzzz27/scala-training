@@ -1,6 +1,14 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July09.scala:51:20: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Seq[scala.collection.immutable.IndexedSeq[Any]][0m
-[0m[[0m[31merror[0m] [0m[0m required: Seq[Seq[String]][0m
-[0m[[0m[31merror[0m] [0m[0m    strSeq.collect {[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July09.scala:105:34: recursive method reverse needs result type[0m
+[0m[[0m[31merror[0m] [0m[0m          case x :: xs :: Nil => reverse(xs)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July09.scala:106:30: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : List[Int][0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m          case x :: Nil => x +: Nil[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July09.scala:110:3: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: Seq[Int][0m
+[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
