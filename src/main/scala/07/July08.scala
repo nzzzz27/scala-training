@@ -8,7 +8,7 @@ object July08 {
     println(reduceSample())
 
     println("//Seq Question")
-    println(seqQuestion1(Seq(1, 3, 5, 7, 9)))
+    //println(seqQuestion1(Seq(1, 3, 5, 7, 9)))
   }
   
   // common values
@@ -16,7 +16,8 @@ object July08 {
 
   def foldLeftSample(): Int = {
     numSeq1.foldLeft(0)((acc, value) => 
-      acc + value //6
+        acc + value //6
+      
       //acc // 0
       //value // 3
     )
@@ -35,7 +36,7 @@ object July08 {
   }
   
   //問題
-  def seqQuestion1(numSeq: Seq[Int]): Any = {
+  //def seqQuestion1(numSeq: Seq[Int]): Seq[Int] = {
     //numSeq.foldLeft(0)((acc, n) => {
       //if (n % 3 == 0) 0 else n
     //})
@@ -45,7 +46,7 @@ object July08 {
       //case _ => 0
     //}
     //
-    numSeq.map(num => if (num % 3 == 0) 0 else num)
-  }
-
+    //numSeq.map(num => if (num % 3 == 0) 0 else num)
+  //}
+  
 }
