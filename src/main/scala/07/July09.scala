@@ -13,7 +13,6 @@ object July09 {
     println(s"Question10-1 : ${seqQuestion10(numSeq)}") 
     println(s"Question10-2 : ${seqQuestion10(numSeq3)}")
     println(s"Question10-3 : ${seqQuestion10(numSeqEmp)}") 
-    println(s"Question11 : ${seqQuestion11(numSeq)}") 
   } 
   
   val numSeq: Seq[Int] = Seq(1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -94,19 +93,5 @@ object July09 {
      case Nil => -1 
      case _ => 0
    } 
-  }
-  
-  //Question11
-  //foldLeftを用いて、Seqの要素を反転させる次のシグニチャを持ったメソッドreverseを実装してみましょう。
-  def seqQuestion11(numSeq: Seq[Int]): Seq[Int] = {
-    def reverse(numSeq: Seq[Int]): Seq[Int] = {  
-      numSeq.foldLeft(0)((acc, value) => {
-        
-        //numSeq match {
-          //case x :: xs :: Nil => reverse(xs)
-          //case x :: Nil => x +: Nil
-        //}
-      })
-    }
   }
 }
