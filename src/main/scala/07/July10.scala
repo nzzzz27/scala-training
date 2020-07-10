@@ -14,11 +14,17 @@ object July10 {
     println(s"seqQuetion10_2-2: ${seqQuestion10_2(Seq(1, 2))}")
     println(s"seqQuetion10_2-3: ${seqQuestion10_2(Seq())}")
     println(s"seqQuetion11: ${reverse(Seq(1, 2, 3, 4, 5))}")
-    println(s"seqQuetion12_1: ${sum_1(Seq(1, 2, 3, 4, 5))}")
-    println(s"seqQuetion12_2: ${sum_2(Seq())}")
+    println(s"seqQuetion12_1: ${sum(Seq(1, 2, 3, 4, 5))}")
+    println(s"seqQuetion12_2: ${sum(Seq())}")
+    println(s"seqQuetion13: ${seqQuestion13(Seq(1, 2, 3, 4, 5))}")
+    //println(s"seqQuetion13-2: ${seqQuestion13(Seq())}")
+    println(s"seqQuetion14: ${seqQuestion14(Seq(3*4, 4*2, 4*1))}")
+    println(s"seqQuetion15: ${seqQuestion15(Seq(3*4, 4*2, 4*1))}")
   }
+
   
   // -------------- Seq Test ---------------------- 
+
   def seqQestion11_test1(numSeq: Seq[Int]): Seq[Int] = {
     numSeq.foldLeft(Nil: List[Int])((acc, value) => {
       value +: acc
@@ -79,11 +85,28 @@ object July10 {
   //Question12
   //Seqの全ての要素を掛け合わせるメソッドsumをfoldRightを用いて実装してみましょう。
   //Seqが空のときは1を返してみましょう。
-  def sum_1(numSeq: Seq[Int]): Int = {
+  def sum(numSeq: Seq[Int]): Int = {
     numSeq.foldRight(1)((value, acc) => acc * value) 
   }
+  
+  //Question13
+  //問題12でreduceを使ってSeqが空の場合、エラーを吐くようにしましょう。
+  def seqQuestion13(numSeq: Seq[Int]): Int = {
+    numSeq.reduce((acc, value) => acc * value) 
+  }
 
-  def sum_2(numSeq: Seq[Int]): Int = {
-    numSeq.foldRight(1)((value, acc) => acc * value) 
-   }
+  //Question14
+  //Seq(3×4, 4×2, 4×1)の最小値を出力しましょう。
+  def seqQuestion14(numSeq: Seq[Int]): Int = {
+    numSeq.min
+  }
+
+  //Question15 
+  //Seq(3×4, 4×2, 4×1)の最大値を出力しましょう。
+  def seqQuestion15(numSeq: Seq[Int]): Int = {
+    numSeq.max
+  }
+
+
 }
+
