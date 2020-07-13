@@ -1,13 +1,13 @@
-# Map (~ July10)
+# Map (July10~)
 - 検索したいキーワードなどをKeyにしておくと検索する際の計算が1回( O(1) )で高速ですが、条件に合致した値を探すために最大でN回の処理を行わないといけません。
 
 
-## Map methods list(~ July10)
+## Map methods list(July10~)
 - .contains(key)
   - return value: true / false
   - 指定したキーがMapに存在するかどうか
 
-- .isDifinedAt(key)
+- .isDefinedAt(key)
   - return value: true / false
   - 指定したキーがMapに存在するかどうか
 
