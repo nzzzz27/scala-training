@@ -8,6 +8,7 @@ object July13 {
     println(toMapTest())
     println(groupByTest())
     println(groupByTest2())
+    println(groupByTest3())
     
     println("//-------Map Question---------")
     println(s"mapQuestion1: ${mapQuestion1()}")
@@ -71,14 +72,31 @@ object July13 {
          "出産祝いでおめでとうを伝えるとき。メールやカードでの伝え方", "友だちの場合やビジネスの場合の文例"),
        Article(122, "2歳の子どもが激しい人見知りをするとき。固まる理由や対応について", "習い事のときや男性に人見知りをするときの様子"),
        Article(530, "1歳の幼児食。野菜を食べてほしいときの献立例やレシピとは", "冷凍ストックやレトルトを使って時短に")
-    )   
+    )  
     articles.groupBy(_.id)
 
     /*
-     * Map(122 -> List(Article(122,2歳の子どもが激しい人見知りをするとき。固まる理由や対応について,習い事のときや男性に人見知りをするときの様子)), 301 -> List(Article(301,出産祝いでおめでとうを伝えるとき。メールやカードでの伝え方,友だちの場合やビジネスの場合の文例)), 530 -> List(Article(530,1歳の幼児食。野菜を食べてほしいときの献立例やレシピとは,冷凍ストックやレトルトを使って時短に)))
-     */
+    Map(122 -> List(Article(122,2歳の子どもが激しい人見知りをするとき。固まる理由や対応について,習い事のときや男性に人見知りをするときの様子)), 301 -> List(Article(301,出産祝いでおめでとうを伝えるとき。メールやカードでの伝え方,友だちの場合やビジネスの場合の文例)), 530 -> List(Article(530,1歳の幼児食。野菜を食べてほしいときの献立例やレシピとは,冷凍ストックやレトルトを使って時短に)))
+    */
   }
   
+  def groupByTest3() = {
+    val numbers = Seq(1, 2, 3, 4, 5)
+    //numbers.groupBy(i => i)
+    //result: Map(5 -> List(5), 1 -> List(1), ....)
+    
+    numbers.groupBy(num => {
+      num match {
+        case num if num % 2 == 0 => 0
+        case _ => 1
+      }
+    })
+    /*
+    numには、Seqの中の値一つずつが入っている。
+    case式で、Mapのkeyを決定
+    */
+
+  }
   
   //--------- Map Questions ---------------
   //
@@ -105,7 +123,7 @@ object July13 {
   //Q3
   //fruitsの中に、特定のキーが存在するかを調べるにはどんな方法がありますか？また、それを使って「ぶどう」と「いちご」の存在判定をしてみてください。
 
-  val grapesStr: String     = "ぶどう"
+  val grapesStr    : String = "ぶどう"
   val strawberryStr: String = "いちご"
   
   def mapQuestion3(): Boolean = {

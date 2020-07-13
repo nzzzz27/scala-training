@@ -28,6 +28,7 @@
 - toMap
   - return value: Map[key, val]
   - タプル2つのSeqからMapに変換
+  - SeqをMapに変換　など
   - 以下使用例
 
 ```
@@ -45,15 +46,22 @@ Map(1 -> 鈴木, 2 -> 佐藤, 3 -> 山田)
   - 以下使用例
 
 ```
-//._2 = tupleの２番目の値 = 値段
-//._2が同一のtupleごとに、Mapの中でグループ化している
+val numbers = Seq(1,2,3,4,5)
 
-val fruits = Map("りんご" -> 100, "みかん" -> 80, "ぶどう" -> 300)
-
-fruits.map(v => v._1 + "は" + v._2 + "円です")
+//num         : Seqの中の値一つずつ
+//case式      : グループ分けの条件
+//case式の結果: keyを作成
+def mapQuestion5_2(): Map[Int, Seq[Int]] = {
+   numbers.groupBy(num => {
+     num match {
+       case num if num % 2 == 0 => 0
+       case _                   => 1
+     }
+   })
+}
 
 //result
-res0: scala.collection.immutable.Iterable[String] = List(りんごは100円です, みかんは80円です, ぶどうは300円です)
+Map(1 -> List(1, 3, 5), 0 -> List(2, 4))
 ```
 
 
