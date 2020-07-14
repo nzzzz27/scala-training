@@ -1,4 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July14.scala:56:1: case classes must have a parameter list; try 'case class SNS()' or 'case object SNS'[0m
-[0m[[0m[31merror[0m] [0m[0m    case class Twitter(id: String, follow: Int, follower: Int)     extends SNS[0m
-[0m[[0m[31merror[0m] [0m[0m^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July14.scala:4:30: value mapQuestion5_2 is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    println("mapQuestion5_2" mapQuestion5_2)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July14.scala:5:30: value mapQuestion5_3 is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    println("mapQuestion5_2" mapQuestion5_3)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July14.scala:6:30: value mapQuestion5_4 is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    println("mapQuestion5_2" mapQuestion5_4)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

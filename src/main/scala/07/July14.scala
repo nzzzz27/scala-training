@@ -1,8 +1,9 @@
 object July14 {
   def main(args: Array[String]) = {
     println("//--- Map Question ---")
-    println(mapQuestion5_2)
-    println(mapQuestion5_3)
+    println("mapQuestion5_2" + mapQuestion5_2)
+    println("mapQuestion5_3" + mapQuestion5_3)
+    println("mapQuestion5_4" + mapQuestion5_4)
 
     println("//--- Tuple Test ---")
     println(s"tupleTest: ${1 -> "Tanaka" -> "student"}")
@@ -21,7 +22,7 @@ object July14 {
   
   //Q5
   //以下のようなSeqがあります。
-  val numbers = Seq(1,2,3,4,5)
+  val numbers = Seq(1, 2, 3, 4, 5)
   //これらを、以下のように2で割った余りでグループ分けしたMapに変えるには、どうしたらいいでしょうか？
   Map(
     1 -> Seq(1, 3, 5),
@@ -38,6 +39,10 @@ object July14 {
     )
   }
 
+  def mapQuestion5_4 = {
+    numbers.groupBy(_ % 2)
+  }
+
   // --------- case class test ----------
   def caseClassTest1: Any = {
     case class Person (
@@ -50,7 +55,7 @@ object July14 {
 
   def caseClassTest2 {
     // ① abstruct: サブクラスでメゾットを実装させる
-    case class SNS
+    abstract class SNS
     
     // ② SNSクラスを承するケースクラスを作成
     case class Twitter(id: String, follow: Int, follower: Int)     extends SNS
@@ -103,8 +108,8 @@ object July14 {
   //Q3
   //3. 会社を表すパラメータをもったCompanyというcase class を定義してください
   case class Company(
-    name: String,
-    phone: String, 
+    name   : String,
+    phone  : String, 
     address: String
   )
 

@@ -1,3 +1,16 @@
+# Map groupBy method
+- keyを指定しない場合、Map内の要素数に合わせてkeyのナンバリングを自由でしてくれる。
+```
+  def mapQuestion5_4 = {
+    numbers.groupBy(_ % 2)
+  }
+  //result
+  Map(1 -> List(1, 3, 5), 0 -> List(2, 4))
+```
+
+
+
+
 # tuple
 - tuple(タプル)は、複数のフィールドをひとまとめにして扱うことができます。
 - 複数型の組み合わせを、2〜22個作ることができる(Scalaの標準ライブラリで定義されているのが22まで)
@@ -15,20 +28,20 @@ val sample2: (String, Int) = ("abc", 100)
 ```
 
 ## 使い方
-###インスタンスの生成  
+### インスタンスの生成  
 ```
 scala> val persons = ("Taro", "Jiro")
 persons: (String, String) = (Taro,Jiro)
 ```
 
-###パラメータ取得
+### パラメータ取得
 tupleの要素がN個存在するとき、それぞれの要素にアクセスするには`tuple._N`
 ```
 scala> persons._1
 res0: String = Taro
 ```
 
-###いろんな書き方
+### いろんな書き方
 全てのタプルは、以下のようにも書ける。
 ```
 Tuple4(1, 2, 3, 4)
@@ -244,6 +257,81 @@ https://docs.oracle.com/javase/jp/8/docs/api/overview-summary.html#overview.desc
 Scalaのパッケージ  
 Scala Standard Library  
 https://www.scala-lang.org/api/current/index.html
+
+
+
+
+# trait, abstract class
+- 継承は、既存のクラスから、新しく作ったクラスに「変数定義」や「メソッド」などを引き継ぐこと
+  - スーパークラス: 継承される既存のクラス（親）
+  - サブクラス    : 継承した新しく作ったクラス(子)
+- 子クラスで定義したメソッドやプロパティは親クラスから呼び出せません。
+
+
+## 継承方法
+- scalaでは、継承元の親を一つしか指定できない。ので、traitがある。
+- classがtraitを継承することをmixinという
+- 処理の共通化、抽象化をしたいときに使う
+ - 抽象化: abstract修飾子。スーパークラスでは定義のみとし、メゾットなどの実装はサブクラスでさせる
+- overrideキーワードを使うと、定義の上書きができる
+
+
+### trait
+  - クラスから、インスタンス化を省いた機能
+  - パラメータを持つことができません
+  - 複数のトレイトをmixinできる 
+```
+//sample1
+trait Namable {
+  //ここはフィールド
+  val name: String
+  def display(): Unit = println(name)
+}
+
+//sample2
+trait sample 
+```
+
+### abstract class
+- 修飾子の一つ
+- このクラスでのメゾット実装を不可にする
+- サブクラスでメゾットを実装する
+```
+//sample1
+abstract sampleClass
+```
+
+#### 具体的な使用例
+```
+// 具体的な実装内容は持っていないが、これで定義してもcompileエラーにならない。
+abstract class Person(
+  name: String,
+  age:  Int  
+) {
+  def greet(): Unit  
+}
+
+// Personを継承した、Japaneseを定義
+case class Japanese(
+  name: String,
+  age:  Int  
+) extends Person(name = name, age = age) {
+  def greet(): Unit = {
+    println("こんにちは")  
+  }  
+}
+
+// Personを継承した、Americanを定義
+// (アメリカの公用語が英語なので、Helloにしました。)
+case class American(
+  name: String,
+  age:  Int  
+) extends Person(name = name, age = age) {
+  def greet(): Unit = {
+    println("Hello")  
+  }  
+}
+```
 
 
 
