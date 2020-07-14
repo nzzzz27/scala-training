@@ -72,32 +72,16 @@ Tuple3(1, 2, 3)
 参考サイト：http://www.ne.jp/asahi/hishidama/home/tech/scala/tuple.html  
 
 
-# import文
-- 2種類存在
-  - single type: クラスやオブジェクトを直接インポートする
-  - on demand  : パッケージ配下の全てのメンバをインポートする
-
-```
-import java.time.LocalTime
-```
-参照：
-
-Javaのパッケージ  
-Java Platform, Standard Edition8: 
-https://docs.oracle.com/javase/jp/8/docs/api/overview-summary.html#overview.description
-
-Scalaのパッケージ  
-Scala Standard Library  
-https://www.scala-lang.org/api/current/index.html
 
 
 # case class
-- 独自の型が持てる
 - 便利なメソッドやコンパニオンオブジェクト(クラスと同名のオブジェクト)が自動的に生成され使えるようになる
+- 独自の型が持てる
 - 不変なデータを作るのに適しています
 - インスタンス化は不要（applyメゾットを標準保有しているため）
 - フィールドは、自動的に`val`として宣言される
-
+- classを継承できる
+- abstractなどの修飾子は使えないし、継承もできない
 
 ## 使い方
 定義
@@ -156,7 +140,7 @@ res1: Int = 20
   - インスタンスの生成に暗黙的に使われている
 
 - unapply()
-  - return value: Option[A] / Option[(A, B)]
+  - return value: Option[A] / Option[(A, B)] / true
   - パラメータを取り出し、別のインスタンスを生成することのできるメソッド
 ```
 //example1
@@ -181,10 +165,43 @@ res1: Int = 20
 ```
 
 - copy()
-toString()
-equals()
-hashCode()
+  - 既存のインスタンスから、copyメソッド内で渡された値を変更した、新たなインスタンスを生成
+  - 別のインスタンスを生成しているだけで、既存のインスタンスの値は変更しない
+```
+scala> val person1 = Person("Tanaka", 20)
+person1: Person = Person(Tanaka,20)
 
+scala> val person2 = person1.copy(name = "Sato")
+person2: Person = Person(Sato,20)
+```
+
+- toString()
+  - case classを綺麗に整形されたString型に変換
+```
+person.toString()
+> Person(Tanaka,20)
+```
+
+- equals()
+  - インスタンス同士を比較して、すべての値が同一であればtrueが返ります。
+  - case classでは、値が同じ別インスタンスは、true(equals)
+  - classでは、値が同じ別インスタンスは、false(not equals)
+```
+scala> case class Person(name: String, age: Int)
+defined class Person
+
+scala> val person1 = Person("Tanaka", 20)
+person1: Person = Person(Tanaka,20)
+
+scala> val person2 = Person("Tanaka", 20)
+person2: Person = Person(Tanaka,20)
+
+scala> person1.equals(person2)
+res2: Boolean = true
+```
+
+- hashCode()
+  - 各フィールドの内容を元にハッシュ値を算出
 
 
 ## クラスとの違い
@@ -212,3 +229,21 @@ case class
 - https://docs.scala-lang.org/ja/tour/case-classes.html
 - http://www.ne.jp/asahi/hishidama/home/tech/scala/class.html
 - https://qiita.com/4245Ryomt/items/ae1468e634523c83d571
+
+
+# import文
+```
+import java.time.LocalTime
+```
+参照：
+
+Javaのパッケージ  
+Java Platform, Standard Edition8: 
+https://docs.oracle.com/javase/jp/8/docs/api/overview-summary.html#overview.description
+
+Scalaのパッケージ  
+Scala Standard Library  
+https://www.scala-lang.org/api/current/index.html
+
+
+
