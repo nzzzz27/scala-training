@@ -1,7 +1,7 @@
 object July16 {
   def main(args: Array[String]): Unit = {
     println("//--- case class, tuple test ---")
-    //println(caseClasstest)
+    println(caseClasstest)
 
     println("//----case class, tuple ---")  
     println(s"case class, tuple Q1: $companyInfo")
@@ -11,8 +11,13 @@ object July16 {
 
     println("//--- trait, abstract class Question ---")
     println(s"直方体: $rectangularVolume")
-
+    println(s"四角錐: $fourSidedPyramidVolume")
+    
+    println("//--- Either, Try --")
+    println(s"Either定義１: $leftEither, $rightEither")
+    println(s"値取得:  ${leftEither.left.get}")
   }
+  
   
   //--- case class tuple ---
   val caseClasstest = Company("nextbeat", "03-5423-6131", None)
@@ -46,15 +51,28 @@ object July16 {
   
 
   // --- trait, abstract class Question ---
-  abstract class Shape(val height: Int) {
+  abstract class Shape(height: Int) {
     def calculate(): Int
   }
 
-  class Rectangular(height: Int, width: Int, depth: Int) extends Shape(height) {
+  case class Rectangular(height: Int, width: Int, depth: Int) extends Shape(height) {
     def calculate(): Int = {
       width * height * depth
     }  
   }
+  
+  case class FourSidedPyramid(height: Int, width: Int, depth: Int) extends Shape(height) {
+    def calculate(): Int = {
+      width * depth * height / 3
+    }
+  }
 
-  val rectangularVolume = new Rectangular(10, 20, 30)
+  val rectangularVolume     : Int = Rectangular(8, 6, 6).calculate
+  val fourSidedPyramidVolume: Int = FourSidedPyramid(8, 6, 6).calculate
+  
+  // --- Either, Try ---
+
+  val leftEither : Either[String, Int] = Left("string") //Left(string)
+  
+  val rightEither: Either[String, Int] = Right(100) //Right(100)
 }

@@ -1,38 +1,87 @@
-object July16 {
-  def main(args: Array[String]): Unit = {
-    println("//--- case class, tuple Question")
-    println(s"case class & tuple Q1: $companyInfo")
-    println(s"case class & tuple Q2: $caseClassTupleQuestion2")
-    println(s"case class & tuple Q3: $nextbeat")
-    println(s"case class & tuple Q5: $nextbeat2")
-  }
-  
-  // Q1
-  // 会社を表す値を持ったtupleを定義してください。
-  val companyInfo: (String, String, Option[String]) = ("nextbeat", "03-5423-6131", "東京都渋谷区恵比寿4丁目9-10")
-  
-  // Q2
-  // 1で定義したtupleから、電話番号の値が含まれる値を取得してください
-  def caseClassTupleQuestion2: String = {
-      companyInfo._2
-  }
-  
-  // Q3
-  // 会社を表すパラメータをもったCompanyというcase class を定義してください
-  case class Company {
-      name   : String, 
-      phone  : String,
-      address: String
-  }
+# Either
+- 「2つのうちどちらか」を1つの型で表すことのできるクラス
+- 第一パラメータ（Left）に「エラー」、第二パラメータ（Right）に成功の値を返す
+- Optionでは情報が足りず、エラーが代数的データ型で定められているときに使う
+  - 代数的データ型：代数的データ型とはプログラミング、特に関数型プログラミングや型システムにおいて使われるデータ型である。それぞれの代数的データ型の値には、1個以上のコンストラクタがあり、各コンストラクタには0個以上の引数がある。
 
-  // Q4
-  // 3で定義したCompanyクラスから、インスタンスを生成してください。
-   val nextbeat = Company("nextbeat", "03-5423-6131", "東京都渋谷区恵比寿4丁目9-10")
+## 定義方法
+### 変数
+vがStringもしくはIntの値のどちらかであるということを定義している
+```
+val v: Either[String, Int]
+```
 
-  // Q5
-  // 4で生成したインスタンスのcopyメソッドを使って会社名を置き換えてください。
-  val nextbeat2 = nextbeat.copy("ネクストビート")
-  
-  
+### インスタンス
+値がLeft, Rightのどちらの型であるかを指定し、その型で初期化を行います。
+```
+//LeftはString, RightはInt型でないとだめ
+val leftEither: Either[String, Int] = Left("string")
 
+val rightEither: Either[String, Int] = Right(100)
+```
+
+### 値の取得
+- `.get`
+getメソッドを直接呼び出すと、その値がない場合に例外が発生します。
+```
+val leftEither : Either[String, Int] = Left("string") 
+val rightEither: Either[String, Int] = Right(100) 
+
+//leftの値を取得
+leftEither.left.get // -> string
+
+//rightの値を取得
+rightEither.right.get // -> 100
+```
+
+- `.getOrElse`
+```
+val leftEither : Either[String, Int] = Left("string") 
+val rightEither: Either[String, Int] = Right(100) 
+
+//leftの値を取得
+leftEither.right.getOrElse("none") // -> none
+
+//rightの値を取得
+rightEither.left.getOrElse // -> 0
+```
+
+- `match式`
+```
+v match {
+  case Left(str)  => println("Rightだから値がないよ")
+  case Right(int) => println(s"入っている値は${int}だよ")
 }
+```
+
+- `.map()`
+扱うEither型の値によって、処理の結果が変化します。  
+EitherがRightである場合、Rightに格納されている値に対して関数を適用。適用後の値をEither型で返します。
+
+```
+// Right型が存在するとき、値が変換されて返却される
+val rightEither: Either[String, Int] = Right(100)
+val after = rightEither.map(i => i * 10)
+
+println(after) // Right(1000)
+
+
+// Right型が存在しない時、エラーとなる
+val leftEither: Either[String, Int] = Left("invalid parameter")
+val after = leftEither.map(i => i * 10)
+
+println(after) // Left("invalid parameter")
+
+
+// Left型に適用したい場合
+val leftEither: Either[String, Int] = Left("invalid parameter")
+val after = leftEither.left.map(s => s"Error! - $s")
+
+println(after) // Left("Error! - invalid parameter")
+```
+
+
+# 修飾子
+## sealed
+同一ファイル内からのみ継承可能なクラス/トレイトとして定義する
+
