@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July15.scala:23:9: class Rectangle needs to be abstract, since method calculate in class Shape of type ()Int is not defined[0m
-[0m[[0m[31merror[0m] [0m[0m  class Rectangle([0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July16.scala:53:26: overriding value height in class Shape of type Int;[0m
+[0m[[0m[31merror[0m] [0m[0m value height needs `override' modifier[0m
+[0m[[0m[31merror[0m] [0m[0m  case class Rectangular(height: Int, width: Int, depth: Int) extends Shape(height) {[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

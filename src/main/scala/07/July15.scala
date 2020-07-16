@@ -1,7 +1,7 @@
 object July15 {
   def main(args: Array[String]): Unit = {
     //println(mapGroupByTest) 
-    println(s"trait, abstract Question: ${rectangle}")
+    println(s"trait, abstract Question1-1: ${rectangular}")
   }
 
   //def mapGroupByTest = {
@@ -14,20 +14,18 @@ object July15 {
 
   //--------trait, abstract -----------
 
-  abstract class Shape (
-    height: Int
-  ) {
-    def calculate(): Int 
+  abstract class Shape (val height: Int) {
+    def calculate(): Int  
   }
-
-  class Rectangle(
-    height: Int
-  ) extends Shape(
-    height = height
-  ) 
-
-  //class FourSidedPyramid() extends Shape
-
-  val rectangle = new Rectangle(100)
   
+  case class Rectangular (_height: Int, width: Int, depth: Int) extends Shape (
+    height = _height
+  ) {
+    def calculate(): Int = {
+      height * width * depth
+    }
+  }
+  
+  val rectangular = Rectangular(10, 20, 10).calculate
+ 
 }
