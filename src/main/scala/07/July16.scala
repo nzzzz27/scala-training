@@ -1,64 +1,64 @@
 object July16 {
   def main(args: Array[String]): Unit = {
     println("//--- case class, tuple test ---")
-    println(caseClasstest)
+      println(caseClassTest)
 
     println("//----case class, tuple ---")  
-    println(s"case class, tuple Q1: $companyInfo")
-    println(s"case class, tuple Q2: $companyInfo_phone")
-    println(s"case class, tuple Q4: $nextbeat")
-    println(s"case class, tuple Q5: $nextbeat2")
+    println(s"case class, tuple q1: $companyInfo")
+    println(s"case class, tuple q2: $companyInfo_phone")
+    println(s"case class, tuple q4: $nextbeat")
+    println(s"case class, tuple q5: $nextbeat2")
 
-    println("//--- trait, abstract class Question ---")
-    println(s"直方体: $rectangularVolume")
-    println(s"四角錐: $fourSidedPyramidVolume")
+    println("//--- trait, abstract class question ---")
+    println(s"直方体: $rectangularvolume")
+    println(s"四角錐: $foursidedpyramidvolume")
     
-    println("//--- Either, Try Test --")
+    println("//--- Either, try test --")
     println(s"Either定義１: $leftEither, $rightEither")
     println(s"leftEither.left.get:  ${leftEither.left.get}")
     println(s"rightEither.left.getOrElse(0):  ${rightEither.left.getOrElse(0)}")
     println(s"rightEither.left.map(i => i):  ${rightEither.left.map(i => i)}")
     println(s"leftEither.right.getOrElse(0):  ${leftEither.right.getOrElse(0)}")
     println(s"leftEither.right.map(i => i):  ${leftEither.right.map(i => i)}")
-    println(tom.name)
+    println(s"leftEither.right.map(i => i):  ${leftEither.right.map(i => i)}")
 
-    println("//--- Either, Try Question --")
-    println(s"eitherTryQuestion1_A: $eitherTryQuestion1_A")
-    println(s"eitherTryQuestion1_B: $eitherTryQuestion1_B")
+    println("//--- Either, try question --")
+    println(s"Eithertryquestion1_a: $Eithertryquestion1_a")
+    println(s"Eithertryquestion1_b: $Eithertryquestion1_b")
 
   }
   
-  val caseClasstest = Company("nextbeat", "03-5423-6131", None)
+  val caseClassTest = Company("nextbeat", "03-5423-6131", None)
 
-  //---- case class, tuple  Questions ----
-  // Q1 
+  //---- case class, tuple  questions ----
+  // q1 
   // 会社を表す値を持ったtupleを定義してください。
   // 会社名は nextbeat / 電話番号は 03-5423-6131 / 住所は 東京都渋谷区恵比寿4丁目9-10
   val companyInfo: (String, String, Option[String]) = ("nextbeat", "03-5423-6131", Some("東京都渋谷区恵比寿4丁目9-10"))
   
-  // Q2
+  // q2
   // 1で定義したtupleから、電話番号の値が含まれる値を取得してください
   val companyInfo_phone: String = companyInfo._2
   
-  // Q3
-  // 会社を表すパラメータをもったCompanyというcase class を定義してください
+  // q3
+  // 会社を表すパラメータをもったcompanyというcase class を定義してください
   case class Company (
     name   : String, 
     phone  : String, 
     address: Option[String]
   )
   
-  // Q4
-  // 3で定義したCompanyクラスから、インスタンスを生成してください。
+  // q4
+  // 3で定義したcompanyクラスから、インスタンスを生成してください。
   // 会社名は nextbeat / 電話番号は 03-5423-6131 / 住所は 東京都渋谷区恵比寿4丁目9-10
   val nextbeat = Company("nextbeat", "03-5423-6131", Some("東京都渋谷区恵比寿4丁目9-10"))
   
-  // Q5
+  // q5
   // 4で生成したインスタンスのcopyメソッドを使って会社名を置き換えてください。
   val nextbeat2 = nextbeat.copy(name = "ネクストビート")
   
 
-  // --- trait, abstract class Question ---
+  // --- trait, abstract class question ---
   abstract class Shape(height: Int) {
     def calculate(): Int
   }
@@ -75,47 +75,47 @@ object July16 {
     }
   }
 
-  val rectangularVolume     : Int = Rectangular(8, 6, 6).calculate
-  val fourSidedPyramidVolume: Int = FourSidedPyramid(8, 6, 6).calculate
+  val rectangularvolume     : Int = Rectangular(8, 6, 6).calculate
+  val foursidedpyramidvolume: Int = FourSidedPyramid(8, 6, 6).calculate
   
   // --- Either test ---
 
-  val leftEither : Either[String, Int] = Left("string") //Left(string)
+  val leftEither : Either[String, Int] = Left("String") //left(String)
   
-  val rightEither: Either[String, Int] = Right(100) //Right(100)
+  val rightEither: Either[String, Int] = Right(100) //right(100)
   case class Person(name: String, age: Int)
-  val tom = Person("Tom", 20)
+  val tom = Person("tom", 20)
 
 
-  // --- Either, Try Questions ---
-  //Q1
+  // --- Either, try questions ---
+  //q1
   /*
-    エディタ、IDE、sbtなどを使わずに、以下の構文でのEitherの型を答えてください。ただし、Eitherのソースを読むのは可とします。
+    エディタ、ide、sbtなどを使わずに、以下の構文でのEitherの型を答えてください。ただし、Eitherのソースを読むのは可とします。
     
-    Either[A, B]の、AとBをそれぞれ答えられたらOKです。
+    Either[a, b]の、aとbをそれぞれ答えられたらokです。
        
     定義
-    case class User(id: UserId, name: String)
-    case class ExceptionMessage(message: String)
+    case class user(id: userid, name: String)
+    case class exceptionmessage(message: String)
 
-    object LoginApplication {
-      def login(id: UserId): Either[String, User] = {
+    object loginapplication {
+      def login(id: userid): Either[String, user] = {
         // implement
       }
     }
     
     回答対象コード
-    // val loginRes = Either[String, User]型の値
+    // val loginres = Either[String, user]型の値
     // 
-    val loginRes = login(UserId(1))
-    loginRes.left.map(s => ExceptionMessage(s)).right.map(u => u.id)
+    val loginres = login(userid(1))
+    loginres.left.map(s => exceptionmessage(s)).right.map(u => u.id)
   */
-  val eitherTryQuestion1_A: String = "A: "
-  val eitherTryQuestion1_B: String = "B: "
+  val Eithertryquestion1_a: String = "a: "
+  val Eithertryquestion1_b: String = "b: "
   
-  //loginRes.left         : NoSuchElementException
-  //loginRes.left.map(s ~): Right()
-  //ExceptionMessage(s).right.map(u ~):
+  //loginres.left         : nosuchelementexception
+  //loginres.left.map(s ~): right()
+  //exceptionmessage(s).right.map(u ~):
 
 
 }
