@@ -1,7 +1,7 @@
 object July17 {
   def main(args: Array[String]): Unit = {
     println("Either, Try Test")
-    println(values.foreach(i => println(i))
+    println(values.foreach(i => println(i)))
     
     println("//--- Either,Try Q1 回答 ---")
     println(s"Aの型は: $eitherTryQ1_A")
