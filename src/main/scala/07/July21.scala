@@ -1,16 +1,17 @@
 // Futureを使えるようにimport
-import scala.concurrent.Future
+import scala.concurrent._
 
 // おまじないだと思って無視してください
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
 
 object July21 {
 
   def main(args: Array[String]): Unit = {
     println("//--- Future Test ---")
     //println(futureTest1)
-    println(futureTest2)
-  
+    //println(futureTest2)
+    println(futureTest3)    
   
 
   }
@@ -35,7 +36,6 @@ object July21 {
   
   //非同期処理
   def futureTest2(): Unit = {
-
     Future {
       (1 to 10).foreach { i =>
         Thread.sleep(1000)
@@ -50,5 +50,22 @@ object July21 {
       }
     }
   }
+  
+  //Futureのメゾット
+  def futureTest3() = {
+    val future = Future {
+      Thread.sleep(1000)
+      2 * 2
+    }
+    
+    //Await.readyの第二引数は待ち時間を表す。Infはinfinityのことで、永遠に待つ。  
+    val result = Await.ready(future, Duration.Inf)
+    result //Future(Success(4))
+
+
+  }
+  
+
 
 }
+
