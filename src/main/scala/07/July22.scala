@@ -1,5 +1,6 @@
 import scala.concurrent._
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.{Success, Failure, Try}
 import scala.concurrent.duration._
 
 object July22 {
@@ -11,13 +12,13 @@ object July22 {
     println(futureTest3)      
 
     println("//--- Future Question --")
-    println(Database.main(1))
+    println(main(1))
   }
   
   //--- Future Test ---
   def futureTest1() = {
     def future1(): Future[Int] =
-      Future{
+      Future {
         Thread.sleep(1000)
         2 * 2
       }
@@ -83,9 +84,9 @@ object July22 {
       case e:Exception => println("エラー発生")
     }
     // 
-    //{future recoverWith {
-    //{  case e: Exception => Future.successful(2)
-    //{}
+    //future recoverWith {
+    //  case e: Exception => Future.successful(2)
+    //}
   }
 
   def futureTest3() = {
@@ -142,17 +143,78 @@ object July22 {
         email = "nextbeat.net"
       ))
 
-    def main(branchId: Long) = {
-      val branchInfo: Future[Branch] = getBranchById(branchId)
-      //Future(Success(Branch(1,1,nextbeat保育園)))
-
-      val orgInfo: Future[Organization] = getOrganizationById(branchId)
-      //Future(Success(Organization(1,株式会社nextbeat,nextbeat.net)))
-
-      branchInfo
-    }
   }
-
   
-}
+  // 途中でエラーになるコード。
+  //def main(branchId: Long): String = {
+  //  val branchInfo: Try[Branch] = Database.getBranchById(branchId).value.get
+  //  //Success(Branch(1,1,nextbeat保育園))
+  //  val orgInfo: Try[Organization] = Database.getOrganizationById(branchId).value.get
+  //  //Success(Organization(1,株式会社nextbeat,nextbeat.net))
 
+  //  val nurseryName: String = branchInfo.flatMap(b =>  
+  //    orgInfo.flatMap(o => 
+  //      o.id match {
+  //        //Organization.idが、Branch.idと同じかどうか調べる
+  //        case b.id => b.name
+  //        //case _    => "not match"
+  //      }
+  //    )
+  //  )
+  //  //nurseryName
+  //  // ↓
+  //  // type mismatch error 
+  //}  
+  
+  // 7/22 17:00に提出したコード
+  /* レビュー
+   　 ・上記、メソッドで返しましょう
+      ・Noneを返す可能性がある時はgetOrElseを使いましょう！
+      Noneを返す可能性がなくても、よくgetOrElse("")とかで使ったりします。
+      <- Future(x).value はその時点の値をOption[Try[T]]で返すので、処理が終わっていなければ、Noneを返します
+      <- Noneにgetするので、エラーになります。
+      ・nurseryNameもFailureを返した際に、getだとコンパイルエラー
+      ・設計の部分で、、
+      getBranchByIdにて Branch が取れている(≒bidがある)ので、getOrganizationByIdの引数に前で取れたbidを利用すると、bidとoidが一致してるかどうかの処理が簡潔になるかと。
+      ・ちなみに、for文で書くともっとすっきり書けます
+   */
+
+  def main(branchId: Long): String = {
+    val branchInfo: Try[Branch]       = Database.getBranchById(branchId).value.get
+    //Success(Branch(1,1,nextbeat保育園))
+    val orgInfo   : Try[Organization] = Database.getOrganizationById(branchId).value.get
+    //Success(Organization(1,株式会社nextbeat,nextbeat.net))
+
+    val nurseryName: Try[String] = branchInfo.flatMap(b => 
+        orgInfo.flatMap(o => 
+            o.id match {
+              case b.id => Success(b.name)
+              case _    => Failure(throw new NoSuchElementException)
+            }
+        )
+    )
+    //nurseryName  //Success(Success(nextbeat保育園))
+    nurseryName.get
+  }  
+     
+  def main1(branchId: Long): String = {
+    val branchInfo: Try[Branch]     = Database.getBranchById(branchId).value.get
+    //Success(Branch(1,1,nextbeat保育園))
+    val orgInfo: Try[Organization]  = Database.getOrganizationById(branchId).value.get
+    //Success(Organization(1,株式会社nextbeat,nextbeat.net))
+
+    val nurseryName: Try[String] = branchInfo.flatMap(b => 
+        orgInfo.flatMap(o => 
+            o.id match {
+              case b.id => Success(b.name)
+              case _    => Failure(throw new NoSuchElementException)
+            }
+        )
+    )
+    //nurseryName  //Success(Success(nextbeat保育園))
+    def getNurseryName(): String = {
+      nurseryName.get
+    }
+  }  
+
+}    

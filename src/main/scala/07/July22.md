@@ -47,7 +47,7 @@ future1 flatMap { n =>
 
 #### `.flatMap + .map`
 ```
-//Future[Unit]
+//Future[Future[Unit]]
 future1 flatMap { n =>
   future2(n) map { m =>
     future3(m)
