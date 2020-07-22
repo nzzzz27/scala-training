@@ -2,30 +2,39 @@
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July21.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July22.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(July21)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(July22.Branch, July22.Database, July22.Organization, July22)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(July21)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July21.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: July21[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(July22.Branch, July22.Database, July22.Organization, July22)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July22.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: July22.Branch, July22.Database, July22.Organization, July22[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.5:compile for Scala 2.12.8[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.5:compile for Scala 2.12.8[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7956e052 for Scala compiler version 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 4f88f682 for Scala compiler version 2.12.8[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/nozomi.yonezawa/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.195472856 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.238305705 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from July22.Database...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: July22.Database[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(July22.Database)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(July22.Database,ModifiedNames(changes = UsedName(main,[Default]))) invalidates 1 classes due to The July22.Database has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(main,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(July22.Database)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m

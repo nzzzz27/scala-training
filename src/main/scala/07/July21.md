@@ -109,7 +109,20 @@ f foreach {
   msg => println(msg)
 }
 ```
- 
+
+## Futureと一緒によくimportされるパッケージ
+```
+//ExecutionContextを使えるように。非推奨。（次の見出し参照）
+import scala.concurrent.ExecutionContext.Implicits.global
+
+//Success, Failureを使えるようにする
+import scala.util.{Failure, Success}
+
+//期間の設定
+import scala.concurrent.duration._
+```
+
+
 ## ExecutionContext
 Futureを使うときに、合わせてimportするが、闇雲にimportしてはいけないので注意。  
 ```
@@ -147,6 +160,7 @@ Futureに定義されている関数は、実際に非同期処理の実行（ex
 > ・タスク数分スレッドを立ち上げるためメモリ/CPU資源の無駄になる 
 > ・しかも暇しているスレッドがいる
 
+![例２](https://mashi.hatenablog.com/entry/2014/11/24/010417)
 > このようにタスク(Runnableといったほうが適切か)を「いい感じ((ExecutionContextの実装による)」にスレッドに分配するのがExecutionContextの役目だ。 
 > 一般には「一定数を最大数とするスレッドプールを持っており、空いてるスレッドを利用してRunnableを処理してくれる」と考えればいいのではないだろうか。
 
@@ -170,9 +184,13 @@ class UserController @Inject()(
   extends MessagesAbstractController(cc){
 ```
 
+## コールバック
+Future[T]に包まれた値を使用するには、Fureture[T]に用意されているメゾット郡を使ってコールバックで処理する。  
+T型の値が立用可能にあった時点で、そのコールバックは発火される。  
+
+
 ## メゾット
 ### 初期化
-処理の式に加えて、ExcecutionContextも必要。
 ```
 val future = Future(1)
 future: scala.concurrent.Future[Int] = Future(Success(1))
@@ -210,9 +228,10 @@ val failed  = Future.failed(throw new java.util.NosuchElementExecption)
 ### `Await`
 値を取得するには、処理の終了を待つ必要がある。Futureの処理が終了するまで待つには、`Await`を使う。  
 
-#### `.Await.ready()`
-Future が完了するまで待機するがその結果を取得しないことができる。   
-同様に、このメソッドを呼んだ時に Future が失敗したとしても例外は投げられない。 
+
+#### `Await.ready()`
+Future が完了するまで待機することができる。   
+このメソッドを呼んだ時、Future が失敗したとしても例外は投げられない。 
 第二引数で、処理の待ち時間の制限指定ができる。下記の場合は、[Duration](https://www.scala-lang.org/api/2.12.3/scala/concurrent/duration/Duration$.html#Inf:scala.concurrent.duration.Duration.Infinite).Inf = duration infinite。  
 ```
 val future = Future {
@@ -225,6 +244,39 @@ val result = Await.ready(future, Duration.Inf)
 
 result //Future(Success(4))
 ```
+
+### `.onComplete`
+戻り値：Unit型  
+Futureが完了した時に、成否にかかわらず呼ばれる。  
+
+定義
+```
+def onComplete[U](f: Try[T] => U)(implicit executor: ExecutionContext): Unit
+```
+
+
+### `[.andThen](https://github.com/scala/scala/blob/a6e1a6f476f26f66ae1c3848033e95f6b173ad56/src/library/scala/concurrent/Future.scala#L497)`
+戻り値：Future型
+
+定義
+```
+def andThen[U](pf: PartialFunction[Try[T], U])(implicit executor: ExecutionContext): Future[T]
+```
+
+
+### Futureの処理を連結させたい時
+Futureの式を合成し、１つのFutureの式にすることができ、DBからのデータ取得をシンプルに書くことができる。  
+ただ、Future式の合成のために、それぞれの式の実行完了を待っている状態になり並列性が失われるので適度にFutureの式を分割する必要がある。 
+
+
+
+
+
+#### `.map()`
+
+
+
+#### `.flatMap()`
 
 
 

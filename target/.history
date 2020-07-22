@@ -38,11 +38,12 @@ run
 run 
 run 10
 run 
-console
+future1 flatMap { n =>
+  future2(n) flatMap { m =>
+    future3(m)
+  }
+}
 run 
-run 1
+}
 run 
-console
-run 
-console
-run 
+run
