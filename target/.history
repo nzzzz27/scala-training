@@ -52,3 +52,47 @@ run
 run 
 run
 run 
+run
+run 
+run
+run 
+run
+def future1(): Future[Int] = 
+  Future{
+    Thread.sleep(1000)
+    2 * 2
+  }
+def future2(i: Int): Future[Int] =  
+  Future {
+    Thread.sleep(1000)
+    i * 2
+  }
+def future3(i: Int): Future[Unit] =
+  Future {
+    Thread.sleep(1000)  
+    println(i * 2)
+  }
+def future1(): Future[Int] = 
+  Future{
+    Thread.sleep(1000)
+    2 * 2
+Branch(
+      id             = 1,
+      organizationId = 1,
+      name           = "nextbeat保育園"
+run 
+14
+run 
+run
+run 
+run
+run 
+run
+run 
+run
+run 
+run
+run 
+run
+:quit
+exit

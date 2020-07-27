@@ -1,6 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July22.scala:219:3: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
-[0m[[0m[31merror[0m] [0m[0m required: String[0m
-[0m[[0m[31merror[0m] [0m[0m  }  [0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July27.scala:86:7: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m      oIdFuture  //Future(<not completed>)[0m
+[0m[[0m[33mwarn[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/07/July27.scala:77:15: value map is not a member of July27.Branch[0m
+[0m[[0m[31merror[0m] [0m[0m      test <- branch[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

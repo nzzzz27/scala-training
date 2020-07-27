@@ -197,7 +197,7 @@ object July22 {
     nurseryName.get
   }  
      
-  def main1(branchId: Long): String = {
+  def getNurseryNameById(branchId: Long): String = {
     val branchInfo: Try[Branch]     = Database.getBranchById(branchId).value.get
     //Success(Branch(1,1,nextbeat保育園))
     val orgInfo: Try[Organization]  = Database.getOrganizationById(branchId).value.get
@@ -215,6 +215,7 @@ object July22 {
     def getNurseryName(): String = {
       nurseryName.get
     }
+    getNurseryName
   }  
 
 }    
