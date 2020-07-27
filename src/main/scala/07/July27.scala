@@ -95,12 +95,10 @@ object July27 {
       organization.name
     }
 
-    val nurseryName: Unit =  nurseryNameFuture.onComplete {
-      case Success(_) => println(nurseryNameFuture.value.get.get)
+    nurseryNameFuture.onComplete {
+      case Success(v) => println(v)
       case Failure(e) => println(e.getMessage)
     }
-
-    nurseryName
   }
   
 }

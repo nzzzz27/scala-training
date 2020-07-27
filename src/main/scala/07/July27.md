@@ -105,8 +105,8 @@ def main(branchId: Long) = {
   }
   
   //4
-  val nurseryName: Unit =  nurseryNameFuture.onComplete {
-    case Success(_) => println(nurseryNameFuture.value.get.get)
+  val nurseryName: Unit = nurseryNameFuture.onComplete {
+    case Success(v) => println(v)
     case Failure(e) => println(e.getMessage)
   }
 
