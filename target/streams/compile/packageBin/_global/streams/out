@@ -2,6 +2,8 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Aug03.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/Aug03.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Aug04$Person.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/Aug04$Person.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July27$GetNurseryName$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July27$GetNurseryName$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July10$$anonfun$1.class[0m
@@ -66,8 +68,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July16$Person.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July17.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July17.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Aug04$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/Aug04$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July21$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July21$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Aug04.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/Aug04.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July14$Company.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July14$Company.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July15.class[0m
@@ -150,6 +156,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July22$Organization$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July21.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July21.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Aug04$Person$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/Aug04$Person$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July16$Rectangular$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes/July16$Rectangular$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	July20$.class[0m

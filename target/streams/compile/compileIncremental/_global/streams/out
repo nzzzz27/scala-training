@@ -2,51 +2,27 @@
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Aug03.Person, Aug03.Article, Aug03, Aug03.ArticleDetail)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Aug04, Aug04.Person)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(Aug03.Person, Aug03.Article, Aug03, Aug03.ArticleDetail)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Aug03.Person, Aug03.Article, Aug03, Aug03.ArticleDetail[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(Aug04, Aug04.Person)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Aug04, Aug04.Person[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.5:compile for Scala 2.12.8[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.5:compile for Scala 2.12.8[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 19a5df53 for Scala compiler version 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7b8ff9a6 for Scala compiler version 2.12.8[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/nozomi.yonezawa/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/nozomi.yonezawa/training/scala-training/target/scala-2.12/classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.689203251 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from Aug03.Person...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Aug03.Person[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(Aug03.Person)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(Aug03.Person,ModifiedNames(changes = UsedName(gender,[Default]), UsedName(equals,[Default]), UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(id,[Default]), UsedName(copy$default$2,[Default]), UsedName(unapply,[Default]), UsedName(ne,[Default]), UsedName(copy,[Default]), UsedName(finalize,[Default]), UsedName(==,[Default]), UsedName(!=,[Default]), UsedName(curried,[Default]), UsedName(synchronized,[Default]), UsedName(##,[Default]), UsedName($init$,[Default]), UsedName(productIterator,[Default]), UsedName(Person,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(toString,[Default]), UsedName(canEqual,[Default]), UsedName(copy$default$3,[Default]), UsedName(hashCode,[Default]), UsedName($isInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(apply,[Default]), UsedName(productElement,[Default]), UsedName(productArity,[Default]), UsedName(copy$default$1,[Default]), UsedName(productPrefix,[Default]), UsedName(eq,[Default]), UsedName(Aug03;Person;init;,[Default]), UsedName(tupled,[Default]), UsedName(name,[Default]))) invalidates 1 classes due to The Aug03.Person has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(gender,[Default]), UsedName(equals,[Default]), UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(id,[Default]), UsedName(copy$default$2,[Default]), UsedName(unapply,[Default]), UsedName(ne,[Default]), UsedName(copy,[Default]), UsedName(finalize,[Default]), UsedName(==,[Default]), UsedName(!=,[Default]), UsedName(curried,[Default]), UsedName(synchronized,[Default]), UsedName(##,[Default]), UsedName($init$,[Default]), UsedName(productIterator,[Default]), UsedName(Person,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(toString,[Default]), UsedName(canEqual,[Default]), UsedName(copy$default$3,[Default]), UsedName(hashCode,[Default]), UsedName($isInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(apply,[Default]), UsedName(productElement,[Default]), UsedName(productArity,[Default]), UsedName(copy$default$1,[Default]), UsedName(productPrefix,[Default]), UsedName(eq,[Default]), UsedName(Aug03;Person;init;,[Default]), UsedName(tupled,[Default]), UsedName(name,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(Aug03.Person)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from Aug03...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Aug03[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(Aug03)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(Aug03,ModifiedNames(changes = UsedName(Person,[Default]), UsedName(question11,[Default]))) invalidates 1 classes due to The Aug03 has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(Person,[Default]), UsedName(question11,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(Aug03)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mCompilation failed (CompilerInterface)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m

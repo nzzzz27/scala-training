@@ -1,22 +1,19 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:69:17: not found: type Person[0m
-[0m[[0m[31merror[0m] [0m[0m    val monica: Person = Person(1L, "Monica", Some("female"))[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:69:26: not found: value Person[0m
-[0m[[0m[31merror[0m] [0m[0m    val monica: Person = Person(1L, "Monica", Some("female"))[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:70:17: not found: type Person[0m
-[0m[[0m[31merror[0m] [0m[0m    val tracy : Person = Person(2L, "Tracy", Some("female"))[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:70:26: not found: value Person[0m
-[0m[[0m[31merror[0m] [0m[0m    val tracy : Person = Person(2L, "Tracy", Some("female"))[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:71:17: not found: type Person[0m
-[0m[[0m[31merror[0m] [0m[0m    val justin: Person = Person(3L, "Justic", Some("male"))[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:71:26: not found: value Person[0m
-[0m[[0m[31merror[0m] [0m[0m    val justin: Person = Person(3L, "Justic", Some("male"))[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug03.scala:72:13: not found: value question11[0m
-[0m[[0m[31merror[0m] [0m[0m    println(question11(Seq(monica, tracy, justin)))[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m7 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala:86:49: not found: type Future[0m
+[0m[[0m[31merror[0m] [0m[0m  def question13(fOps: Future[Option[String]]): Future[Unit] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala:86:24: not found: type Future[0m
+[0m[[0m[31merror[0m] [0m[0m  def question13(fOps: Future[Option[String]]): Future[Unit] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala:26:24: not found: value Future[0m
+[0m[[0m[31merror[0m] [0m[0m    println(question13(Future(Some("nextbeat"))))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala:27:24: not found: value Future[0m
+[0m[[0m[31merror[0m] [0m[0m    println(question13(Future(None)))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala:90:23: not found: value Future[0m
+[0m[[0m[31merror[0m] [0m[0m      case Some(_) => Future(_)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nozomi.yonezawa/training/scala-training/src/main/scala/08/Aug04.scala:91:25: not found: value Future[0m
+[0m[[0m[31merror[0m] [0m[0m      case None      => Future("なし")[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
